@@ -1,4 +1,4 @@
-# Databricks Certified Data Engineer Associate
+# Databricks Certified Data Engineer Associate test git
 
 <img align="left" role="left" src="https://img-c.udemycdn.com/course/240x135/4956262_2022_2.jpg" width="180" alt="Databricks Certified Data Engineer Associate - Preparation" />
 This repository contains the resources of the preparation course for Databricks Data Engineer Associate certification exam on Udemy:
