@@ -42,6 +42,10 @@ def get_index(dir):
 
 # COMMAND ----------
 
+
+
+# COMMAND ----------
+
 def set_current_catalog(catalog_name):
     spark.sql(f"USE CATALOG {catalog_name}")
 

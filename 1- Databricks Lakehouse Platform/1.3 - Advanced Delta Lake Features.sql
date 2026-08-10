@@ -5,7 +5,24 @@
 
 -- COMMAND ----------
 
-USE CATALOG hive_metastore
+USE CATALOG workspace
+
+-- COMMAND ----------
+
+CREATE TABLE employees2 (id INT NOT NULL, name STRING);
+
+-- COMMAND ----------
+
+ALTER TABLE employees ALTER COLUMN name SET NOT NULL;
+--ALTER TABLE employees ALTER COLUMN name DROP NOT NULL;
+
+-- COMMAND ----------
+
+SHOW TBLPROPERTIES employees2;
+
+-- COMMAND ----------
+
+DESCRIBE TABLE EXTENDED employees;
 
 -- COMMAND ----------
 

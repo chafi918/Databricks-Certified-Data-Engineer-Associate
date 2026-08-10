@@ -4,10 +4,11 @@
 
 -- COMMAND ----------
 
-USE CATALOG hive_metastore
+USE CATALOG workspace
 
 -- COMMAND ----------
 
+-- DBTITLE 1,Cellule 3
 CREATE TABLE employees
   (id INT, name STRING, salary DOUBLE);
 
@@ -69,7 +70,7 @@ DESCRIBE DETAIL employees
 
 -- COMMAND ----------
 
--- MAGIC %fs ls 'dbfs:/user/hive/warehouse/employees'
+-- MAGIC %fs ls 'abfss://unity-catalog-storage@dbstoragevpsgwzl454hg4.dfs.core.windows.net/7405616136717707/__unitystorage/catalogs/806d24bc-529f-454c-9a5d-65de93e7df39/tables/f3f5bf0c-40e9-4911-9995-2e08cc3eea76'
 
 -- COMMAND ----------
 
@@ -96,7 +97,7 @@ DESCRIBE DETAIL employees
 
 -- COMMAND ----------
 
-SELECT * FROM employees
+SELECT * FROM employees@v3
 
 -- COMMAND ----------
 
@@ -106,6 +107,14 @@ SELECT * FROM employees
 -- COMMAND ----------
 
 DESCRIBE HISTORY employees
+
+-- COMMAND ----------
+
+SET spark.databricks.delta.autoCompact.minNumFiles; 
+
+-- COMMAND ----------
+
+DESCRIBE TABLE EXTENDED employees
 
 -- COMMAND ----------
 
